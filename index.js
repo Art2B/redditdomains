@@ -1,11 +1,12 @@
 const moment = require('moment')
 const request = require('axios')
 
+const config = require('./config.json')
+
 let redditPosts = []
+let limitDate = moment(config.limitDate, 'DD-MM-YYYY')
 
-let limitDate = moment('31-08-2017', 'DD-MM-YYYY')
-
-request.get('https://www.reddit.com/r/programming.json')
+request.get(config.subredditurl)
 .then(function (response) {
   response.data.data.children.map(function (el) {
     let postDate = moment.unix(el.data.created)
