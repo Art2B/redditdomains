@@ -1,0 +1,16 @@
+{
+  "name": "redditdomains",
+  "version": "1.0.0",
+  "description": "Display domains of given subreddit",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Art2B",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "request": "^2.81.0"
+  }
+}
